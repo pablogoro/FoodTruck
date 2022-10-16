@@ -1,0 +1,591 @@
+                            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+                            @import url('https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300&family=Shadows+Into+Light&display=swap');
+                            body {
+                                background-color: #ffffff;
+                            }
+                            
+                            * {
+                                scroll-behavior: smooth;
+                            }
+                            /* nav */
+                            
+                            .menu {
+                                display: flex;
+                                position: fixed;
+                                z-index: 100;
+                                background-color: #060606;
+                                width: 100%;
+                                height: 13vh;
+                            }
+                            
+                            .menu img {
+                                display: block;
+                                width: 40%;
+                                height: 30vh;
+                            }
+                            
+                            .icon {
+                                display: none;
+                            }
+                            
+                            .menu span svg {
+                                width: 50px;
+                                height: 50px;
+                                display: none;
+                            }
+                            /* active nav */
+                            
+                            .active {
+                                color: #E59500;
+                            }
+                            
+                            .navigation li {
+                                display: inline;
+                                justify-content: space-between;
+                            }
+                            
+                            li a {
+                                text-decoration: none;
+                                color: aliceblue;
+                            }
+                            
+                            .tittle {
+                                display: flex;
+                                align-items: center;
+                                width: 40%;
+                                height: 10vh;
+                                padding-top: 2%;
+                                padding-left: 2%;
+                                /* font-size: 20px; */
+                                color: #E59500;
+                                font-family: 'Dancing Script', cursive;
+                            }
+                            
+                            .tittle p {
+                                font-size: 40px;
+                            }
+                            
+                            .navigation {
+                                /* height: 8vh; */
+                                width: 50%;
+                                display: flex;
+                                align-items: center;
+                                padding-top: 2%;
+                                /* padding-right: 15%; */
+                                height: 100%;
+                                font-size: 25px;
+                            }
+                            
+                            .navigation ul {
+                                width: 100%;
+                            }
+                            
+                            .navigation ul li {
+                                padding-left: 10%;
+                                float: left;
+                            }
+                            
+                            .navigation2 {
+                                display: none;
+                            }
+                            /* slider */
+                            
+                            .slider img {
+                                width: 100%;
+                                height: 80vh;
+                                object-fit: fill;
+                            }
+                            
+                            .center {
+                                display: flex;
+                                justify-content: center;
+                            }
+                            
+                            .carousel {
+                                padding-top: 5%;
+                                width: 80%;
+                            }
+                            
+                            .tittle2 {
+                                padding-top: 5%;
+                                font-size: 50px;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                color: #E59500;
+                                font-family: 'Dancing Script', cursive;
+                            }
+                            
+                            hr {
+                                width: 50%;
+                                border-width: 1px;
+                                border-color: #840032;
+                            }
+                            
+                            .hr2 {
+                                width: 100%;
+                                border-width: 1px;
+                                border-color: #840032;
+                            }
+                            
+                            h3 {
+                                color: aliceblue;
+                            }
+                            
+                            .platos {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                            }
+                            
+                            #platos {
+                                color: #02040F;
+                            }
+                            
+                            #ubi {
+                                color: #02040F;
+                            }
+                            
+                            #info {
+                                color: #02040F;
+                            }
+                            
+                            #horarios {
+                                color: #02040F;
+                            }
+                            /* footer */
+                            
+                            footer {
+                                background-color: #002642;
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                text-decoration: none;
+                                color: aliceblue;
+                                padding-top: 5%;
+                                padding-bottom: 2%;
+                            }
+                            
+                            footer div {
+                                padding-left: 30%;
+                            }
+                            
+                            footer div a {
+                                color: aliceblue;
+                            }
+                            /* cards */
+                            
+                             :root {
+                                --background-dark: #2d3548;
+                                --text-light: rgba(255, 255, 255, 0.6);
+                                --text-lighter: rgba(255, 255, 255, 0.9);
+                                --spacing-s: 8px;
+                                --spacing-m: 16px;
+                                --spacing-l: 24px;
+                                --spacing-xl: 32px;
+                                --spacing-xxl: 64px;
+                                --width-container: 1200px;
+                            }
+                            
+                            .hero-section {
+                                align-items: flex-start;
+                                display: flex;
+                                min-height: 100%;
+                                justify-content: center;
+                                padding: var(--spacing-xxl) var(--spacing-l);
+                            }
+                            
+                            .card-grid {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                grid-column-gap: var(--spacing-l);
+                                grid-row-gap: var(--spacing-l);
+                                max-width: var(--width-container);
+                                width: 100%;
+                            }
+                            
+                            .card {
+                                list-style: none;
+                                position: relative;
+                            }
+                            
+                            .card:before {
+                                content: '';
+                                display: block;
+                                padding-bottom: 110%;
+                                width: 100%;
+                            }
+                            
+                            .card__background {
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: var(--spacing-s);
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                transform-origin: center;
+                                transform: scale(1) translateZ(0);
+                                transition: filter 200ms linear, transform 200ms linear;
+                            }
+                            
+                            .card:hover .card__background {
+                                transform: scale(1.05);
+                            }
+                            
+                            .card-grid:hover>.card:not(:hover) .card__background {
+                                filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+                            }
+                            
+                            .card__content {
+                                left: 0;
+                                padding: var(--spacing-l);
+                                position: absolute;
+                                top: 0;
+                            }
+                            
+                            .card__heading {
+                                color: var(--text-lighter);
+                                font-size: 1.9rem;
+                                text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+                                line-height: 1.4;
+                                word-spacing: 100vw;
+                            }
+                            /* menu card */
+                            
+                            .menu-grid {
+                                display: grid;
+                                grid-template-columns: repeat(1ç, 1fr);
+                                grid-column-gap: var(--spacing-s);
+                                grid-row-gap: var(--spacing-s);
+                                /* max-width: var(--width-container); */
+                                width: 15%;
+                            }
+                            
+                            .menu__background {
+                                opacity: .99;
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: var(--spacing-s);
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                transform-origin: center;
+                                transform: scale(1) translateZ(0);
+                                transition: filter 200ms linear, transform 200ms linear;
+                            }
+                            
+                            .menu__content {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-content: center;
+                                z-index: 1;
+                            }
+                            
+                            .menu__content div {
+                                /* background-color: red; */
+                            }
+                            
+                            .menu__heading {
+                                color: var(--text-lighter);
+                                font-size: 1.9rem;
+                                text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+                                line-height: 1.4;
+                                word-spacing: 100vw;
+                            }
+                            
+                            .menu__pdf {
+                                padding-top: 5%;
+                                padding-bottom: 5%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+                            .menu__pdf embed {
+                                width: 50%;
+                                height: 116vh;
+                            }
+                            
+                            .maps {
+                                padding-top: 2%;
+                                padding-bottom: 5%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            
+                            .maps h3 {
+                                color: aliceblue;
+                            }
+                            /* platos */
+                            
+                            .platos__background {
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: var(--spacing-s);
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                transform-origin: center;
+                            }
+                            
+                            .info__box {
+                                color: aliceblue;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding-top: 5%;
+                                padding-bottom: 15%;
+                            }
+                            
+                            .info {
+                                border-radius: 10px;
+                                border: 1px solid aliceblue;
+                                padding: 2%;
+                                width: 70%;
+                            }
+                            
+                            .info h3 {
+                                color: #E59500;
+                            }
+                            
+                            .active {
+                                color: #E59500;
+                            }
+                            
+                            .active2 {
+                                color: #E59500;
+                            }
+                            
+                            .decoration {
+                                color: aliceblue;
+                                font-size: 30px;
+                                font-family: 'Redacted Script', cursive;
+                            }
+                            
+                            .horario {
+                                color: aliceblue;
+                                font-family: 'Shadows Into Light', cursive;
+                            }
+                            
+                            .horarioP {
+                                color: aliceblue;
+                            }
+                            
+                            .horarios__box {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding-top: 5%;
+                                padding-bottom: 15%;
+                            }
+                            
+                            .card__footer {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-evenly;
+                                font-size: 25px;
+                                font-family: 'Dancing Script', cursive;
+                            }
+                            
+                            @media(max-width:1340px) {
+                                .tittle p {
+                                    font-size: 35px;
+                                }
+                            }
+                            
+                            @media(max-width:1200px) {
+                                .navigation {
+                                    font-size: 20px;
+                                }
+                                .tittle p {
+                                    font-size: 30px;
+                                }
+                            }
+                            
+                            @media(max-width:1000px) {
+                                .tittle p {
+                                    font-size: 27px;
+                                }
+                                .card-grid {
+                                    grid-template-columns: repeat(2, 1fr);
+                                    width: 90%;
+                                }
+                            }
+                            
+                            @media(max-width: 975px) {
+                                .card-grid {
+                                    grid-template-columns: repeat(2, 1fr);
+                                    width: 90%;
+                                }
+                                .icon {
+                                    width: 30%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                .menu span svg {
+                                    display: block;
+                                }
+                                .menu {
+                                    width: 100vw;
+                                    display: flex;
+                                }
+                                .menu .navigation {
+                                    display: none;
+                                }
+                                .tittle {
+                                    width: 70%;
+                                }
+                                .carousel-inner {
+                                    height: 60vh;
+                                }
+                                .slider img {
+                                    width: 100%;
+                                    height: 60vh;
+                                    object-fit: fill;
+                                    position: absolute;
+                                }
+                                .navigation2 {
+                                    width: 100%;
+                                    padding-top: 15%;
+                                    display: flex;
+                                    background-color: #840033b9;
+                                    height: 80vh;
+                                    justify-content: center;
+                                    z-index: 1;
+                                    position: fixed;
+                                    transition-duration: 1.5s;
+                                    transition-delay: 1s;
+                                    transition-timing-function: ease-in-out;
+                                }
+                                .invisible {
+                                    display: none;
+                                }
+                                .navigation2 ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                .navigation2 ul li {
+                                    padding-top: 45%;
+                                    text-decoration: none;
+                                    font-size: 25px;
+                                    list-style: none;
+                                }
+                                .info__box {
+                                    padding-top: 5%;
+                                    padding-bottom: 15%;
+                                }
+                                .info {
+                                    padding: 2%;
+                                    width: 70%;
+                                }
+                            }
+                            
+                            @media(max-width: 800px) {
+                                .carousel-inner {
+                                    height: 50vh;
+                                }
+                                .slider img {
+                                    width: 100%;
+                                    height: 50vh;
+                                    object-fit: fill;
+                                }
+                                .tittle2 {
+                                    font-size: 27px;
+                                }
+                            }
+                            
+                            @media(max-width: 700px) {
+                                .card-grid {
+                                    grid-template-columns: repeat(1, 1fr);
+                                    width: 50%;
+                                }
+                                .card__heading {
+                                    display: inline;
+                                    font-size: 20px;
+                                }
+                                .menu__heading {
+                                    display: inline;
+                                    font-size: 20px;
+                                }
+                                .menu-grid {
+                                    width: 30%;
+                                    /* height: 100%; */
+                                }
+                                .maps iframe {
+                                    width: 60%;
+                                    height: 40vh;
+                                }
+                                .tittle2 {
+                                    font-size: 27px;
+                                }
+                            }
+                            
+                            @media(max-width: 580px) {
+                                footer {
+                                    font-size: 90%;
+                                }
+                                footer div h5 {
+                                    font-size: 90%;
+                                }
+                                .tittle2 {
+                                    font-size: 27px;
+                                }
+                                .carousel {
+                                    width: 100%;
+                                }
+                            }
+                            
+                            @media(max-width: 505px) {
+                                .tittle p {
+                                    font-size: 20px;
+                                }
+                                .tittle2 {
+                                    font-size: 27px;
+                                }
+                                .carousel {
+                                    width: 100%;
+                                }
+                            }
+                            
+                            @media(max-width: 400px) {
+                                .tittle p {
+                                    font-size: 16px;
+                                }
+                                .tittle2 {
+                                    font-size: 27px;
+                                }
+                                .carousel {
+                                    width: 100%;
+                                }
+                            }
+                            
+                            @media(max-width: 280px) {
+                                footer {
+                                    font-size: 60%;
+                                }
+                                footer div h5 {
+                                    font-size: 60%;
+                                }
+                                .card__heading {
+                                    display: inline;
+                                    font-size: 70%;
+                                }
+                                .carousel {
+                                    width: 100%;
+                                }
+                                .tittle2 {
+                                    font-size: 17px;
+                                }
+                            }
